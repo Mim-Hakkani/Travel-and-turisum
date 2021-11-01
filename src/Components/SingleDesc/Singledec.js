@@ -42,7 +42,7 @@ const Singledec = () => {
             status:'pending'
         }
         console.log(orderDetails);
-        axios.post('http://localhost:5000/order',orderDetails)
+        axios.post('https://serene-forest-10567.herokuapp.com/order',orderDetails)
         .then(res =>{
             if(res.data.insertedId){
                 alert('added successful')
