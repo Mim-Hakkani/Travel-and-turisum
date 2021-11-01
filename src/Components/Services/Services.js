@@ -5,7 +5,7 @@ import { Link, NavLink } from 'react-router-dom';
 const Service = () => {
     const [services,setServices]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/services')
+        fetch('https://serene-forest-10567.herokuapp.com/services')
         .then(res=>res.json())
         .then(data=>setServices(data))
     },[services])
@@ -13,11 +13,11 @@ const Service = () => {
         <Spinner animation="border" />
         :
         <div>
-            
+
             <Container className="py-4">
                <Row xs={1} md={3} lg={3} className="g-4">
                     {services.map(service=><Col>
-                        <Card style={{height:'500px'}}>
+                        <Card style={{height:'550px'}}>
                             <Card.Img variant="top" src={service.img} style={{height:'400px',width:'100%'}}/>
                             <Card.Body>
                             <Card.Title>{service.name}</Card.Title>
