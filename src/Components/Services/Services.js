@@ -13,6 +13,7 @@ const Service = () => {
         <Spinner animation="border" />
         :
         <div>
+            
             <Container className="py-4">
                <Row xs={1} md={3} lg={3} className="g-4">
                     {services.map(service=><Col>
