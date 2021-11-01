@@ -9,14 +9,14 @@ const Manageorder = () => {
     const{user}=useAuth()
 
     useEffect(()=>{
-        fetch('http://localhost:5000/orders')
+        fetch('https://serene-forest-10567.herokuapp.com/orders')
         .then(res=>res.json())
         .then(data=>setOrders(data))
     },[orders,statusId])
 
 
     const handleUpdate=(id)=>{
-        fetch(`http://localhost:5000/orders/${id}`,{
+        fetch(`https://serene-forest-10567.herokuapp.com/orders/${id}`,{
             method:'PUT'
         })
         .then(res=>res.json())
@@ -31,7 +31,7 @@ const Manageorder = () => {
     const handleDelete=(id)=>{
         const proceed=window.confirm('Are You Sure to Delete')
         if(proceed){
-            fetch(`http://localhost:5000/orders/${id}`,{
+            fetch(`https://serene-forest-10567.herokuapp.com/orders/${id}`,{
             method:'DELETE'
         })
         .then(res=>res.json())

@@ -7,7 +7,7 @@ const AddNeworder = () => {
     const { register,reset, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
         
-        fetch(`http://localhost:5000/services`,{
+        fetch(`https://serene-forest-10567.herokuapp.com/services`,{
             method:"POST",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify(data),

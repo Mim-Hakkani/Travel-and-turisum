@@ -28,7 +28,7 @@ const Service = () => {
                             <Link to={`/booking/${service._id}`}><button className="btn btn-warning px-5">Book Now</button></Link>
                             </Card.Body>
                         </Card>
-                        </Col>)}\
+                        </Col>)}
                 </Row>
                 </Container>
         </div>

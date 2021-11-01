@@ -17,7 +17,7 @@ const Singledec = () => {
     console.log(service);
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/services/${id}`)
+        fetch(`https://serene-forest-10567.herokuapp.com/services/${id}`)
         .then(res=>res.json())
         .then(data=>setService(data))
     },[id])
