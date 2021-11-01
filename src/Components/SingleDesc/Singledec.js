@@ -11,7 +11,7 @@ const Singledec = () => {
     const [service,setService]=useState({})
     const {id} =useParams();
     const {user} = useAuth()
-    console.log(user);
+    
     const{name,prices,desc,img,_id}=service
 
     console.log(service);
@@ -20,7 +20,7 @@ const Singledec = () => {
         fetch(`https://serene-forest-10567.herokuapp.com/services/${id}`)
         .then(res=>res.json())
         .then(data=>setService(data))
-    },[id])
+    },[id,service])
 
 
 
